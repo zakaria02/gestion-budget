@@ -10,9 +10,8 @@ const TextStyle amountTitleStyle = TextStyle(
   fontWeight: FontWeight.w500,
 );
 
-const TextStyle amountValueStyle = TextStyle(
-  fontFamily: "Quicksand",
-  fontSize: 16,
-  color: black,
-  fontWeight: FontWeight.w800,
-);
+const TextStyle amountValueStyle =
+    TextStyle(fontFamily: "Poppins", fontSize: 18, color: black);
+
+const Color incomeColor = Color(0xFF88D49B);
+const Color expensesColor = Color(0xFFEE8880);

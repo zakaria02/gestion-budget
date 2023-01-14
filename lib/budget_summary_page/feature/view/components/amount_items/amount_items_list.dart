@@ -31,7 +31,7 @@ class ItemsDash extends StatelessWidget {
     return const Dash(
       direction: Axis.vertical,
       dashLength: 5,
-      length: 30,
+      length: 40,
       dashColor: black,
     );
   }

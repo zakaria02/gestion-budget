@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../utils/utils.dart';
 import 'components/budget_summary_body.dart';
 
 class BudgetSummaryPageView extends StatelessWidget {
@@ -7,6 +8,7 @@ class BudgetSummaryPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: white,
       body: BudgetSummaryBody(),
     );
   }
