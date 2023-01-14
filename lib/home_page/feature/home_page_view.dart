@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-import 'components/home_page_scaffold.dart';
+import 'components/components.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return HomePageScaffold();
+    return Scaffold(
+      appBar: const HomePageAppBar(),
+      body: const HomePageBody(),
+      bottomNavigationBar: HomePageBottomBar(),
+      floatingActionButton: const HomePageFAB(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
   }
 }

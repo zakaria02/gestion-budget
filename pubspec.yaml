@@ -38,6 +38,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   flutter_bloc: ^8.1.1
+  auto_size_text: ^3.0.0
+  animated_bottom_navigation_bar: ^1.1.0+1
+  unicons: ^2.1.0 # icon's link : https://iconscout.com/unicons/explore/line
+  equatable: ^2.0.5
+  bloc: ^8.1.0
+  flutter_dash: ^1.0.0
 
 dev_dependencies:
   flutter_test:
