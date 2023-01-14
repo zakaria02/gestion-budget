@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'home_page/business/navigation/navigation.dart';
 import 'home_page/home_page.dart';
 
 void main() {
@@ -10,8 +12,11 @@ class BudgetApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePageView(),
+    return BlocProvider<NavigationCubit>(
+      create: (context) => NavigationCubit(),
+      child: const MaterialApp(
+        home: HomePageView(),
+      ),
     );
   }
 }
