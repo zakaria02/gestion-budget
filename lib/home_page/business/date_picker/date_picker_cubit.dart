@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:gestion_budget/utils/utils.dart';
 
 part 'date_picker_state.dart';
 

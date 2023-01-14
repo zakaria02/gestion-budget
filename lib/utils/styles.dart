@@ -31,10 +31,25 @@ const TextStyle body = TextStyle(
   color: Colors.black,
 );
 
+const TextStyle pageTitle = TextStyle(
+  fontFamily: "Quicksand",
+  fontSize: 17,
+  color: Colors.black,
+  fontWeight: FontWeight.w600,
+  letterSpacing: 2,
+);
+
+TextStyle appBarButton = TextStyle(
+  fontFamily: "Quicksand",
+  fontSize: 16,
+  color: Colors.grey[700],
+  fontWeight: FontWeight.w600,
+);
+
 const TextStyle buttonBody = TextStyle(
   color: Colors.white,
   fontSize: 14,
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.w600,
 );
 
 /// All paddings must be declared here
