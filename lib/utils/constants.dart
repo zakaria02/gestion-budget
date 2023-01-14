@@ -9,3 +9,6 @@ const String assetsFile = "assets";
 const String svgFile = "$assetsFile/svg";
 
 const String welcomeSVG = "$svgFile/welcome.svg";
+
+DateTime maxDate = DateTime(2050);
+DateTime minDate = DateTime(2010);

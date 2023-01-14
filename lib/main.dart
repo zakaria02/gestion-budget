@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'home_page/business/date_picker/date_picker_cubit.dart';
+import 'business/size/size_cubit.dart';
 import 'home_page/business/navigation/navigation.dart';
 import 'home_page/home_page.dart';
 
@@ -12,10 +14,23 @@ class BudgetApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<NavigationCubit>(
-      create: (context) => NavigationCubit(),
-      child: const MaterialApp(
-        home: HomePageView(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<NavigationCubit>(
+          create: (context) => NavigationCubit(),
+        ),
+        BlocProvider<SizeCubit>(
+          create: (context) => SizeCubit(),
+        ),
+        BlocProvider<DatePickerCubit>(
+          create: (context) => DatePickerCubit(),
+        )
+      ],
+      child: MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.pink,
+        ),
+        home: const HomePageView(),
       ),
     );
   }

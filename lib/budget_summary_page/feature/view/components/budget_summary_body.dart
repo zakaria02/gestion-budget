@@ -1,56 +1,66 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../business/size/size_cubit.dart';
 import 'no_data.dart';
 import 'amount_items/amount_items_list.dart';
 import '../../../../utils/utils.dart';
 import '../../../budget_summary_utils/budget_summary_utils.dart';
 
+// ignore: must_be_immutable
 class BudgetSummaryBody extends StatelessWidget {
-  const BudgetSummaryBody({super.key});
+  BudgetSummaryBody({super.key});
+
+  late double height;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(mainPadding),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          SizedBox(
-            height: 30,
+    return BlocBuilder<SizeCubit, SizeState>(
+      builder: (context, sizeState) {
+        height = sizeState.height * 0.04;
+        return Padding(
+          padding: const EdgeInsets.all(mainPadding),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: height,
+              ),
+              const Text(
+                title,
+                style: h1,
+              ),
+              SizedBox(
+                height: height,
+              ),
+              const AmountItemsList(),
+              SizedBox(
+                height: height,
+              ),
+              const Text("Income", style: h1),
+              SizedBox(
+                height: height,
+              ),
+              const NoData(
+                isIncome: true,
+              ),
+              SizedBox(
+                height: height,
+              ),
+              const Text("Expenses", style: h1),
+              SizedBox(
+                height: height,
+              ),
+              const NoData(
+                isIncome: false,
+              ),
+              SizedBox(
+                height: height,
+              ),
+            ],
           ),
-          Text(
-            title,
-            style: h1,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          AmountItemsList(),
-          SizedBox(
-            height: 30,
-          ),
-          Text("Income", style: h1),
-          SizedBox(
-            height: 30,
-          ),
-          NoData(
-            isIncome: true,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Text("Expenses", style: h1),
-          SizedBox(
-            height: 30,
-          ),
-          NoData(
-            isIncome: false,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
