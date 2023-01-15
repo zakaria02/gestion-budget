@@ -13,9 +13,10 @@ const Color blue = Color(0xFF28c2ff);
 /// All texts Styles must be declared here
 const TextStyle h1 = TextStyle(
   fontFamily: "Quicksand",
-  fontSize: 25,
-  fontWeight: FontWeight.w700,
+  fontSize: 32,
+  fontWeight: FontWeight.w600,
   color: Colors.black,
+  letterSpacing: 2,
 );
 
 const TextStyle h3 = TextStyle(
@@ -44,6 +45,13 @@ TextStyle appBarButton = TextStyle(
   fontSize: 16,
   color: Colors.grey[700],
   fontWeight: FontWeight.w600,
+);
+
+const TextStyle textButton = TextStyle(
+  fontFamily: "Quicksand",
+  fontSize: 14,
+  color: Colors.black,
+  letterSpacing: 2,
 );
 
 const TextStyle buttonBody = TextStyle(

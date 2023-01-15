@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/utils.dart';
 import 'compenents/components.dart';
 
 class AddTransactionView extends StatelessWidget {
@@ -7,7 +8,7 @@ class AddTransactionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AddTransactionAppBar(),
+      backgroundColor: white,
       body: AddTransactionBody(),
     );
   }

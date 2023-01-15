@@ -1,0 +1,1 @@
+enum TransactionEnum { income, expenses }

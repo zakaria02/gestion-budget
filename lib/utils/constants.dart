@@ -12,3 +12,6 @@ const String welcomeSVG = "$svgFile/welcome.svg";
 
 DateTime maxDate = DateTime(2050);
 DateTime minDate = DateTime(2010);
+
+const String income = "Income";
+const String expenses = "Expenses";

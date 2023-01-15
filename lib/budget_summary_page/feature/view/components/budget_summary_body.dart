@@ -37,7 +37,7 @@ class BudgetSummaryBody extends StatelessWidget {
               SizedBox(
                 height: height,
               ),
-              const Text("Income", style: h1),
+              const Text(income, style: h1),
               SizedBox(
                 height: height,
               ),
@@ -47,7 +47,7 @@ class BudgetSummaryBody extends StatelessWidget {
               SizedBox(
                 height: height,
               ),
-              const Text("Expenses", style: h1),
+              const Text(expenses, style: h1),
               SizedBox(
                 height: height,
               ),

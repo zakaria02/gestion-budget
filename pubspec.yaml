@@ -46,6 +46,7 @@ dependencies:
   flutter_dash: ^1.0.0
   dotted_border: ^2.0.0+3
   month_year_picker: ^0.2.0+3
+  firebase_core: ^2.4.1
 
 dev_dependencies:
   flutter_test:
